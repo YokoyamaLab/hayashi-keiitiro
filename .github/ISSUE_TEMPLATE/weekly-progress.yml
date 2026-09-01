@@ -1,0 +1,178 @@
+name: "週次報告"
+description: "月曜日に今週の目標を設定し、金曜日に成果と課題を振り返ります"
+title: "[Weekly] "
+labels:
+  - "weekly"
+projects:
+  - "YokoyamaLab/16"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Weekly Research Progress
+
+        このIssueは、月曜日に今週の目標を設定し、金曜日に成果と課題を振り返るための週次記録です。
+
+        - 横山研進捗管理プロジェクトでは Scope を `Weekly` とします。
+        - このIssueだけ週次の Iteration を割り当てます。
+        - 月曜日: 今週の目標と成果物を記入してください。
+        - 金曜日: 実際の成果、未完了事項、成果物へのリンク、次週の課題を追記してください。
+
+  - type: input
+    id: week
+    attributes:
+      label: "Week"
+      description: "この週の月曜日の日付を YYYY-MM-DD で入力してください"
+      placeholder: "2026-09-07"
+    validations:
+      required: true
+
+  - type: textarea
+    id: carry-over
+    attributes:
+      label: "先週からの持ち越し"
+      description: "前週から継続する作業がある場合は、前週のIssueへのリンクとともに記入してください"
+      placeholder: |
+        Previous issue: #123
+
+        - 継続する作業
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## Monday — Plan
+
+  - type: textarea
+    id: goals
+    attributes:
+      label: "今週の目標"
+      description: "金曜日に達成できたか判断できる具体的な目標を書いてください"
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: "金曜日に確認できる成果物"
+      description: "PR、commit、実験結果、論文原稿、図表など、レビュー可能な成果物を書いてください"
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: activity
+    attributes:
+      label: "今週の主な活動"
+      multiple: true
+      options:
+        - "Implementation / 実装"
+        - "Experiment / 実験"
+        - "Data analysis / データ分析"
+        - "Paper writing / 論文執筆"
+        - "Literature review / 文献調査"
+        - "Design / 設計"
+        - "Dataset preparation / データ準備"
+        - "Presentation / 発表準備"
+        - "Environment setup / 環境構築"
+        - "Other / その他"
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: "懸念・障害・相談事項"
+      description: "技術的な障害、判断に迷っていること、教員に相談したいことを書いてください"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## Friday — Result
+
+        以下は金曜日のレビュー前にIssue本文を編集して更新してください。
+
+  - type: textarea
+    id: friday-result
+    attributes:
+      label: "金曜日時点の結果"
+      value: |
+        ### 完了したこと
+
+        -
+
+        ### 完了しなかったこと
+
+        -
+
+        ### 当初の計画から変更したこと
+
+        -
+
+        ### 分かったこと・得られた知見
+
+        -
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "成果物・Evidence"
+      description: "PR、commit、論文、実験結果などのURLを記入してください"
+      value: |
+        ### Pull Request
+        -
+
+        ### Commits
+        -
+
+        ### Paper / Document
+        -
+
+        ### Experiment / Results
+        -
+
+        ### Other
+        -
+    validations:
+      required: false
+
+  - type: textarea
+    id: next-week
+    attributes:
+      label: "次週への課題"
+      description: "今週の結果を踏まえて、次に行うべきことを書いてください"
+      value: |
+        -
+    validations:
+      required: false
+
+  - type: textarea
+    id: reflection
+    attributes:
+      label: "振り返り"
+      value: |
+        ### うまくいったこと
+        -
+
+        ### 難しかったこと
+        -
+
+        ### 改善したいこと
+        -
+    validations:
+      required: false
