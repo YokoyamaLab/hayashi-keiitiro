@@ -1,0 +1,149 @@
+name: "論文調査（1論文1Issue）"
+description: "読んだ論文を1本ずつ記録します。1 Issue = 1論文です"
+title: "[Paper Survey] "
+labels:
+  - "paper-survey"
+projects:
+  - "YokoyamaLab/16"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # 論文調査 / Paper Survey
+
+        **このIssueは1本の論文につき1件作成してください。**
+
+        - 複数論文を1つのIssueへまとめないでください。
+        - 読み始めた時点でIssueを作成して構いません。
+        - 読み終わって内容を記入したらIssueをCloseしてください。
+        - Open = 読書中、Closed = 読了として中央の論文調査一覧に表示します。
+        - 横山研進捗管理プロジェクトでは Scope を `Paper Survey` とし、週次Iterationは設定しません。
+        - **研究の柱はIssue本文では入力せず、横山研進捗管理プロジェクトに既にある研究の柱用Single select fieldを選択してください。**
+          中央の論文調査一覧もプロジェクト側の値を唯一の正として分類します。
+
+  - type: input
+    id: paper-title
+    attributes:
+      label: "論文タイトル"
+      description: "論文の正式タイトルを記入してください"
+      placeholder: "Attention Is All You Need"
+    validations:
+      required: true
+
+  - type: input
+    id: authors
+    attributes:
+      label: "著者"
+      description: "主要著者を記入してください。長い場合は et al. でも構いません"
+      placeholder: "Vaswani et al."
+    validations:
+      required: true
+
+  - type: input
+    id: venue
+    attributes:
+      label: "会議名・論文誌名"
+      description: "会議、論文誌、arXiv等を記入してください"
+      placeholder: "NeurIPS 2017"
+    validations:
+      required: false
+
+  - type: input
+    id: publication-year
+    attributes:
+      label: "発表年"
+      placeholder: "2017"
+    validations:
+      required: true
+
+  - type: input
+    id: paper-url
+    attributes:
+      label: "論文URL / DOI"
+      description: "DOI、出版社ページ、arXiv等のURLを記入してください"
+      placeholder: "https://..."
+    validations:
+      required: true
+
+  - type: input
+    id: one-line-summary
+    attributes:
+      label: "一言まとめ"
+      description: "この論文が何をした論文なのか、一覧を見ただけで分かる1文を書いてください"
+      placeholder: "自己注意機構だけで系列変換を行うTransformerを提案した論文。"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "何を解決しようとしているか"
+      description: "この論文が扱う問題・課題を簡潔に書いてください"
+    validations:
+      required: true
+
+  - type: textarea
+    id: method
+    attributes:
+      label: "どのような方法か"
+      description: "提案手法、モデル、アルゴリズム、実験設計などを自分の言葉でまとめてください"
+    validations:
+      required: true
+
+  - type: textarea
+    id: data
+    attributes:
+      label: "どのようなデータを使っているか"
+      description: "データセット、センサ、SNS、画像、時系列など、対象データを書いてください"
+    validations:
+      required: false
+
+  - type: textarea
+    id: result
+    attributes:
+      label: "主な結果・分かったこと"
+      description: "何と比較して、何が良くなった／分かったのかを書いてください"
+    validations:
+      required: true
+
+  - type: textarea
+    id: strengths-limitations
+    attributes:
+      label: "良い点・限界・疑問点"
+      value: |
+        ### 良い点
+        -
+
+        ### 限界
+        -
+
+        ### 疑問点
+        -
+    validations:
+      required: false
+
+  - type: textarea
+    id: relation
+    attributes:
+      label: "自分の研究との関係"
+      description: "なぜこの論文を読んだか、自分の研究でどこを利用・比較・引用できそうかを書いてください"
+      value: |
+        ### なぜ読んだか
+        -
+
+        ### 自分の研究に使えそうな点
+        -
+
+        ### 比較対象・引用候補として
+        -
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "メモ"
+      description: "図番号、重要な式、再読したい箇所、関連Issueなど自由に記録してください"
+    validations:
+      required: false
