@@ -1,6 +1,6 @@
 name: "論文執筆"
 description: "投稿予定論文の内容、投稿先、デッドライン、執筆計画を管理します"
-title: "[Paper Writing] "
+title: "[論文執筆] "
 labels:
   - "paper-writing"
 projects:
