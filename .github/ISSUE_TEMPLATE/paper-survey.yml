@@ -21,6 +21,9 @@ body:
         - 横山研進捗管理プロジェクトでは Scope を `Paper Survey` とし、週次Iterationは設定しません。
         - **研究の柱はIssue本文では入力せず、横山研進捗管理プロジェクトに既にある研究の柱用Single select fieldを選択してください。**
           中央の論文調査一覧もプロジェクト側の値を唯一の正として分類します。
+        - 親Issueが未設定なら、中央自動化がその週のWeekly IssueへSub-issueとして追加します。
+        - 一度WeeklyのSub-issueになった後は、翌週以降へ親Issueを自動で付け替えません。
+        - 翌週開始前までOpenのままなら、翌週Weeklyの「自動持ち越し」にリンクされます。複数週にまたがっても元の親Weeklyは保持します。
 
   - type: input
     id: paper-title
