@@ -16,6 +16,7 @@ body:
 
         - 複数論文を1つのIssueへまとめないでください。
         - 読み始めた時点でIssueを作成して構いません。
+        - `Deadline` は、この論文を読み終え、必要な記録を完成させてIssueをCloseする期限です。
         - 読み終わって内容を記入したらIssueをCloseしてください。
         - Open = 読書中、Closed = 読了として中央の論文調査一覧に表示します。
         - 横山研進捗管理プロジェクトでは Scope を `Paper Survey` とし、週次Iterationは設定しません。
@@ -31,6 +32,15 @@ body:
       label: "論文タイトル"
       description: "論文の正式タイトルを記入してください"
       placeholder: "Attention Is All You Need"
+    validations:
+      required: true
+
+  - type: input
+    id: deadline
+    attributes:
+      label: "Deadline"
+      description: "この論文を読み終え、調査記録を完成させてIssueをCloseする期限を YYYY-MM-DD で入力してください。中央自動化がProjectのDeadlineへ同期します。"
+      placeholder: "2026-09-11"
     validations:
       required: true
 
