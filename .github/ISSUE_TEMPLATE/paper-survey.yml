@@ -21,7 +21,7 @@ body:
         - Open = 読書中、Closed = 読了として中央の論文調査一覧に表示します。
         - 横山研進捗管理プロジェクトでは Scope を `Paper Survey` とし、週次Iterationは設定しません。
         - **`Subject` を必ずProject上で選択してください。Issue本文には重複入力しません。**
-          `Subject` は研究班・活動分類です。`Social Data` / `Sensor Data` が2つの研究班、`Other` は両班共通・分類外の活動に使用します。
+          `Subject` は研究班・活動分類です。`Social Data` / `Sensor Data` が2つの研究班、`Miscellaneous` は両班共通・分類外の活動に使用します。
           Paper Surveyでは通常、論文の内容に対応する `Social Data` または `Sensor Data` を選び、両班共通・分類外なら `Miscellaneous` を選びます。
           中央の論文調査一覧もProjectの `Subject` を唯一の正として分類します。
         - 親Issueが未設定なら、中央自動化がその週のWeekly IssueへSub-issueとして追加します。
