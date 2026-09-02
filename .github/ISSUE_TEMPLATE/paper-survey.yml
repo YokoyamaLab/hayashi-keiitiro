@@ -15,12 +15,12 @@ body:
         **このIssueは1本の論文につき1件作成してください。**
 
         - 複数論文を1つのIssueへまとめないでください。
-        - 読み始めた時点でIssueを作成して構いません。
+        - 読み始めた時点でIssueを作成して構いません。(各記述項目は空欄で作製し、後から更新してください)
         - `Deadline` は、この論文を読み終え、必要な記録を完成させてIssueをCloseする期限です。
         - 読み終わって内容を記入したらIssueをCloseしてください。
         - Open = 読書中、Closed = 読了として中央の論文調査一覧に表示します。
         - 横山研進捗管理プロジェクトでは Scope を `Paper Survey` とし、週次Iterationは設定しません。
-        - **研究の柱はIssue本文では入力せず、横山研進捗管理プロジェクトに既にある研究の柱用Single select fieldを選択してください。**
+        - 研究の柱を必ずSubjectで選択してください。
           中央の論文調査一覧もプロジェクト側の値を唯一の正として分類します。
         - 親Issueが未設定なら、中央自動化がその週のWeekly IssueへSub-issueとして追加します。
         - 一度WeeklyのSub-issueになった後は、翌週以降へ親Issueを自動で付け替えません。
@@ -158,5 +158,13 @@ body:
     attributes:
       label: "メモ"
       description: "図番号、重要な式、再読したい箇所、関連Issueなど自由に記録してください"
+    validations:
+      required: false
+      
+  - type: textarea
+    id: next
+    attributes:
+      label: "次に読む"
+      description: "次に読むべき論文があれば理由とともに書いてください"
     validations:
       required: false
