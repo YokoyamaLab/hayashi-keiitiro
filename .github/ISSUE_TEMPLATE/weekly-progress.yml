@@ -17,8 +17,11 @@ body:
         - 横山研進捗管理プロジェクトでは Scope を `Weekly` とします。
         - このIssueだけ週次の Iteration を割り当てます。
         - 月曜日: 今週の目標と成果物を記入してください。
+        - **実際の研究作業は先に個別Issueを作り、このWeeklyにはIssue番号と「今週の到達点」を書いてください。**
+        - Weeklyのチェック項目を後からIssueへ変換する運用は行いません。
         - 金曜日: 実際の成果、未完了事項、成果物へのリンク、次週の課題を追記してください。
         - Paper Surveyは作成時のWeeklyのSub-issueとして管理し、未完了の場合は翌週Weeklyへリンクのみ自動持ち越しします。親Weeklyは付け替えません。
+        - 詳細は https://github.com/YokoyamaLab/Lab_Management/blob/main/WORKFLOW.md を参照してください。
 
   - type: input
     id: week
@@ -33,7 +36,7 @@ body:
     id: carry-over
     attributes:
       label: "先週からの持ち越し"
-      description: "前週から継続する作業がある場合は、前週のIssueへのリンクとともに記入してください。未完了Paper Surveyは中央自動化が別の『自動持ち越し』欄へ追加します。"
+      description: "前週から継続する作業がある場合は、前週のIssueや継続する個別Issueへのリンクとともに記入してください。未完了Paper Surveyは中央自動化が別の『自動持ち越し』欄へ追加します。"
       placeholder: |
         Previous issue: #123
 
@@ -63,10 +66,10 @@ body:
     id: deliverables
     attributes:
       label: "金曜日に確認できる成果物"
-      description: "PR、commit、実験結果、論文原稿、図表など、レビュー可能な成果物を書いてください"
+      description: "先に作成した研究タスク・論文調査・論文執筆等のIssue番号と、今週金曜日までの具体的な到達点を書いてください。『#123 を進める』ではなく、達成判定できる状態を書きます。"
       value: |
-        - [ ]
-        - [ ]
+        - [ ] #123 今週金曜日までの具体的な到達点
+        - [ ] #124 今週金曜日までの具体的な到達点
         - [ ]
     validations:
       required: true
