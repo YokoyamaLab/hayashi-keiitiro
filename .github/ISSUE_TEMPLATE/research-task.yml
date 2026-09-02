@@ -1,0 +1,118 @@
+name: "研究タスク"
+description: "実装、実験、分析、データ準備、環境構築などの研究作業を管理します"
+title: "[研究タスク] "
+labels:
+  - "research-task"
+projects:
+  - "YokoyamaLab/16"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # 研究タスク
+
+        このIssueは、実装・実験・分析・データ準備・環境構築など、完了条件を明確にできる研究作業を管理するためのものです。
+
+        - 横山研進捗管理プロジェクトでは Scope を `Research Task` とします。
+        - WeeklyのIterationは割り当てません。
+        - `Deadline` はこのIssue全体を完了する期限です。原則として数日〜2週間程度で完了できる大きさに分解してください。
+        - 数週間以上かかる場合は、Issueが大きすぎないか見直してください。
+        - 実装を伴う場合は、このIssueに対応するbranchを作成し、Pull Requestでレビューしてmainへmergeしてください。
+        - WeeklyにはこのIssueへのリンクと「今週どこまで到達するか」を具体的に書いてください。
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: "作業種別"
+      options:
+        - "Implementation / 実装"
+        - "Experiment / 実験"
+        - "Data analysis / データ分析"
+        - "Dataset preparation / データ準備"
+        - "Environment setup / 環境構築"
+        - "Design / 設計"
+        - "Other / その他"
+    validations:
+      required: true
+
+  - type: input
+    id: deadline
+    attributes:
+      label: "Deadline"
+      description: "このIssue全体を完了する期限を YYYY-MM-DD で入力してください。中央自動化がProjectのDeadlineへ同期します。"
+      placeholder: "2026-09-18"
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: "目的"
+      description: "なぜこの作業を行うのか、研究上の目的を書いてください"
+      placeholder: "この作業によって..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: task
+    attributes:
+      label: "作業内容"
+      description: "実施する内容を具体的に書いてください"
+      value: |
+        -
+    validations:
+      required: true
+
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: "完了条件 / Definition of Done"
+      description: "何が揃えばこのIssueをCloseできるかを、確認可能な形で書いてください"
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: related
+    attributes:
+      label: "関連Issue・論文"
+      description: "関連するPaper Writing、Paper Survey、他の研究タスク等があればリンクしてください"
+      value: |
+        -
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "成果物・Evidence"
+      description: "作業完了時にPR、commit、実験結果、グラフ、データ等へのリンクを追記してください"
+      value: |
+        ### Pull Request
+        -
+
+        ### Commits
+        -
+
+        ### Experiment / Results
+        -
+
+        ### Data / Document
+        -
+
+        ### Other
+        -
+    validations:
+      required: false
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: "懸念・ブロッカー・相談事項"
+      description: "技術的な障害、判断が必要なこと、教員に相談したいことを書いてください"
+    validations:
+      required: false
