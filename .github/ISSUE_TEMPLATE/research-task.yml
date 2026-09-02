@@ -11,9 +11,11 @@ body:
     attributes:
       value: |
         # 研究タスク
-
+        
         このIssueは、実装・実験・分析・データ準備・環境構築など、完了条件を明確にできる研究作業を管理するためのものです。
 
+        必ずこのタスクを作業する週の進捗報告(Weekly ToDo)のIssueからこのIssueへリンクを貼ってください。
+        
         - 横山研進捗管理プロジェクトでは Scope を `Research Task` とします。
         - WeeklyのIterationは割り当てません。
         - `Deadline` はこのIssue全体を完了する期限です。原則として数日〜2週間程度で完了できる大きさに分解してください。
