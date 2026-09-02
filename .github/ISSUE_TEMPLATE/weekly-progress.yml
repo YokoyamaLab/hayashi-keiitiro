@@ -1,6 +1,6 @@
 name: "週次報告"
 description: "月曜日に今週の目標を設定し、金曜日に成果と課題を振り返ります"
-title: "[Weekly] "
+title: "[進捗報告] "
 labels:
   - "weekly"
 projects:
