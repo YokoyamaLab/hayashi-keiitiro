@@ -14,11 +14,14 @@ body:
 
         このIssueは、論文採択後の学会発表、研究会発表、ポスター、デモ、卒論・修論発表、中間発表など、発表当日までの準備を管理するためのものです。
 
+        必ずこのタスクを作業する週の進捗報告(Weekly ToDo)のIssueからこのIssueへリンクを貼ってください。
+
         - 横山研進捗管理プロジェクトでは Scope を `Presentation Prep` とします。
         - WeeklyのIterationは割り当てません。
         - `Deadline` は発表日そのものではなく、**研究室内でレビュー可能な完成版にする期限**です。
         - WeeklyにはこのIssueへのリンクと「今週どこまで到達するか」を具体的に書いてください。
         - 論文に基づく発表の場合は、元のPaper Writing Issueを関連Issueとしてリンクしてください。
+        - Issueは発表日まではCloseしてはいけません。発表後、スライド等をTeamsへアップロードし、このIssueをCloseしましょう。
 
   - type: input
     id: event
