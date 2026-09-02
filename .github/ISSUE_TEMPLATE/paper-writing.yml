@@ -14,15 +14,18 @@ body:
 
         このIssueは、少し長期の論文執筆を管理するためのものです。
 
+        必ずこのタスクを作業する週の進捗報告(Weekly ToDo)のIssueからこのIssueへリンクを貼ってください。
+
         - 横山研進捗管理プロジェクトでは Scope を `Paper Writing` とします。
         - このIssueには週次の Iteration は割り当てません。
         - 投稿先と締切を明確にし、投稿内容・実験・図表・執筆の計画を継続的に更新してください。
+        - 発表日まではこのIssueはCloseしてはいけません。(会議後、PDFをTeamsに保存し、Issueは忘れずにCloseしましょう)
 
   - type: input
     id: venue
     attributes:
       label: "投稿先"
-      description: "国際会議、国内研究会、論文誌などの正式名称を書いてください"
+      description: "国際会議、国内研究会、論文誌などの名称を書いてください"
       placeholder: "例: GISTAM 2027"
     validations:
       required: true
@@ -128,7 +131,7 @@ body:
   - type: textarea
     id: problem
     attributes:
-      label: "解決する問題"
+      label: "解決する問題、仮説、もしくはResearch Question"
       description: "この研究で解決しようとしている問題を具体的に書いてください"
     validations:
       required: true
@@ -165,18 +168,6 @@ body:
            -
     validations:
       required: true
-
-  - type: textarea
-    id: figures-tables
-    attributes:
-      label: "必要な図・表"
-      description: "論文に必要な図表を先に計画します。評価グラフの場合は軸や比較対象も書いてください"
-      value: |
-        - [ ] Figure 1:
-        - [ ] Figure 2:
-        - [ ] Table 1:
-    validations:
-      required: false
 
   - type: textarea
     id: experiments
@@ -217,14 +208,8 @@ body:
     attributes:
       label: "リンク"
       value: |
-        ### Overleaf
-        https://
-
-        ### GitHub
-        https://
-
-        ### 投稿先
-        https://
+        ### 論文Texソースコード(各自のリポジトリ内に作成してください／2027年までは過渡期としてOverleafも可)
+        - 
 
         ### その他
         -
