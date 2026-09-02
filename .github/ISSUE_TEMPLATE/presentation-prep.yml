@@ -1,0 +1,182 @@
+name: "発表準備"
+description: "口頭発表、ポスター、デモ、卒論・修論発表などの準備を管理します"
+title: "[発表準備] "
+labels:
+  - "presentation-prep"
+projects:
+  - "YokoyamaLab/16"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # 発表準備 / Presentation Prep
+
+        このIssueは、論文採択後の学会発表、研究会発表、ポスター、デモ、卒論・修論発表、中間発表など、発表当日までの準備を管理するためのものです。
+
+        - 横山研進捗管理プロジェクトでは Scope を `Presentation Prep` とします。
+        - WeeklyのIterationは割り当てません。
+        - `Deadline` は発表日そのものではなく、**研究室内でレビュー可能な完成版にする期限**です。
+        - WeeklyにはこのIssueへのリンクと「今週どこまで到達するか」を具体的に書いてください。
+        - 論文に基づく発表の場合は、元のPaper Writing Issueを関連Issueとしてリンクしてください。
+
+  - type: input
+    id: event
+    attributes:
+      label: "発表イベント"
+      description: "学会・研究会・卒論発表・修論発表・中間発表など、発表する場を記入してください"
+      placeholder: "例: GISTAM 2027 / 修士論文発表会 2026"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: presentation-type
+    attributes:
+      label: "発表形式"
+      options:
+        - "Oral / 口頭発表"
+        - "Poster / ポスター"
+        - "Demo / デモ"
+        - "Lightning talk / ショート・ライトニング"
+        - "Thesis defense / 卒論・修論発表"
+        - "Other / その他"
+    validations:
+      required: true
+
+  - type: input
+    id: presentation-title
+    attributes:
+      label: "発表タイトル"
+      description: "現時点のタイトルで構いません。確定後に更新してください"
+    validations:
+      required: true
+
+  - type: input
+    id: related-paper-writing
+    attributes:
+      label: "関連Paper Writing Issue"
+      description: "論文に基づく発表の場合は、元の論文執筆Issue番号またはURLを記入してください"
+      placeholder: "例: #80"
+    validations:
+      required: false
+
+  - type: input
+    id: presenter
+    attributes:
+      label: "発表者"
+      description: "実際に発表する人を記入してください"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: "発表言語"
+      options:
+        - "Japanese / 日本語"
+        - "English / 英語"
+        - "Other / その他"
+    validations:
+      required: true
+
+  - type: input
+    id: duration
+    attributes:
+      label: "発表時間・質疑時間"
+      description: "分かっている場合は発表時間と質疑時間を記入してください"
+      placeholder: "例: 発表15分 + 質疑5分"
+    validations:
+      required: false
+
+  - type: input
+    id: deadline
+    attributes:
+      label: "Deadline"
+      description: "研究室内でレビュー可能な完成版にする期限を YYYY-MM-DD で入力してください。中央自動化がProjectのDeadlineへ同期します。"
+      placeholder: "2027-03-24"
+    validations:
+      required: true
+
+  - type: textarea
+    id: key-message
+    attributes:
+      label: "この発表で伝えること"
+      description: "聴衆に持ち帰ってほしい主張・メッセージを1〜3点に絞ってください"
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: materials
+    attributes:
+      label: "発表資料・準備物"
+      description: "この発表で必要な成果物を列挙してください"
+      value: |
+        - [ ] スライド / ポスター初稿
+        - [ ] 教員レビュー
+        - [ ] 指摘修正
+        - [ ] 最終版
+        - [ ] 発表練習
+        - [ ] 想定質問・回答
+    validations:
+      required: true
+
+  - type: textarea
+    id: rehearsal
+    attributes:
+      label: "発表練習"
+      description: "練習日、所要時間、指摘事項、次に直すことを記録してください"
+      value: |
+        ### 練習記録
+        - YYYY-MM-DD:
+
+        ### 時間
+        -
+
+        ### 指摘・修正事項
+        -
+    validations:
+      required: false
+
+  - type: textarea
+    id: questions
+    attributes:
+      label: "想定質問・回答"
+      description: "想定される質問と回答方針を整理してください"
+      value: |
+        - Q:
+          A:
+    validations:
+      required: false
+
+  - type: textarea
+    id: logistics
+    attributes:
+      label: "機材・デモ・当日の確認事項"
+      description: "PC、アダプタ、ネットワーク、デモ機材、印刷物などがある場合に記入してください"
+      value: |
+        -
+    validations:
+      required: false
+
+  - type: textarea
+    id: links
+    attributes:
+      label: "成果物・リンク"
+      value: |
+        ### Slides / Poster
+        -
+
+        ### Demo / Repository
+        -
+
+        ### Related Paper
+        -
+
+        ### Other
+        -
+    validations:
+      required: false
