@@ -1,6 +1,6 @@
 name: "論文調査（1論文1Issue）"
 description: "読んだ論文を1本ずつ記録します。1 Issue = 1論文です"
-title: "[Paper Survey] "
+title: "[論文調査] "
 labels:
   - "paper-survey"
 projects:
