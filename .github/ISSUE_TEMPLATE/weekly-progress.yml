@@ -18,7 +18,7 @@ body:
         - このIssueだけ週次の Iteration を割り当てます。
         - 月曜日: 今週の目標と成果物を記入してください。
         - 金曜日: 実際の成果、未完了事項、成果物へのリンク、次週の課題を追記してください。
-        - ゼミを欠席する場合も、Friday Result は通常どおり更新してください。教員は同じIssue上で非同期レビューします。
+        - Paper Surveyは作成時のWeeklyのSub-issueとして管理し、未完了の場合は翌週Weeklyへリンクのみ自動持ち越しします。親Weeklyは付け替えません。
 
   - type: input
     id: week
@@ -33,7 +33,7 @@ body:
     id: carry-over
     attributes:
       label: "先週からの持ち越し"
-      description: "前週から継続する作業がある場合は、前週のIssueへのリンクとともに記入してください"
+      description: "前週から継続する作業がある場合は、前週のIssueへのリンクとともに記入してください。未完了Paper Surveyは中央自動化が別の『自動持ち越し』欄へ追加します。"
       placeholder: |
         Previous issue: #123
 
