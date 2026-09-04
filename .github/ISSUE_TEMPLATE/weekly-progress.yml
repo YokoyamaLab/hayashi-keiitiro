@@ -74,22 +74,22 @@ body:
     validations:
       required: true
 
-  - type: dropdown
+  - type: checkboxes
     id: activity
     attributes:
       label: "今週の主な活動"
-      multiple: true
+      description: "該当する活動をすべて選択してください"
       options:
-        - "Implementation / 実装"
-        - "Experiment / 実験"
-        - "Data analysis / データ分析"
-        - "Paper writing / 論文執筆"
-        - "Literature review / 文献調査"
-        - "Design / 設計"
-        - "Dataset preparation / データ準備"
-        - "Presentation / 発表準備"
-        - "Environment setup / 環境構築"
-        - "Other / その他"
+        - label: "Implementation / 実装"
+        - label: "Experiment / 実験"
+        - label: "Data analysis / データ分析"
+        - label: "Paper writing / 論文執筆"
+        - label: "Literature review / 文献調査"
+        - label: "Design / 設計"
+        - label: "Dataset preparation / データ準備"
+        - label: "Presentation / 発表準備"
+        - label: "Environment setup / 環境構築"
+        - label: "Other / その他"
     validations:
       required: true
 
