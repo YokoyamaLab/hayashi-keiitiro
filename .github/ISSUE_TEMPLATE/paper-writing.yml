@@ -14,12 +14,12 @@ body:
 
         このIssueは、少し長期の論文執筆を管理するためのものです。
 
-        必ずこのタスクを作業する週の進捗報告(Weekly ToDo)のIssueからこのIssueへリンクを貼ってください。
+        必ずこのタスクに取り組む週の進捗報告（Weekly ToDo）のIssueから、このIssueへリンクを貼ってください。
 
         - 横山研進捗管理プロジェクトでは Scope を `Paper Writing` とします。
         - このIssueには週次の Iteration は割り当てません。
         - 投稿先と締切を明確にし、投稿内容・実験・図表・執筆の計画を継続的に更新してください。
-        - 発表日まではこのIssueはCloseしてはいけません。(会議後、PDFをTeamsに保存し、Issueは忘れずにCloseしましょう)
+        - 発表日まではこのIssueをCloseしないでください。（会議後、PDFをTeamsに保存し、Issueも忘れずにCloseしましょう）
 
   - type: input
     id: venue
@@ -131,7 +131,7 @@ body:
   - type: textarea
     id: problem
     attributes:
-      label: "解決する問題、仮説、もしくはResearch Question"
+      label: "解決する問題、仮説、もしくは Research Question"
       description: "この研究で解決しようとしている問題を具体的に書いてください"
     validations:
       required: true
@@ -208,8 +208,8 @@ body:
     attributes:
       label: "リンク"
       value: |
-        ### 論文Texソースコード(各自のリポジトリ内に作成してください／2027年までは過渡期としてOverleafも可)
-        - 
+        ### 論文TeXソースコード（各自のリポジトリ内に作成してください／2027年までは過渡期としてOverleafも可）
+        -
 
         ### その他
         -
