@@ -1,4 +1,4 @@
-name: "発表準備"
+name: "発表準備 / Presentation Prep"
 description: "口頭発表、ポスター、デモ、卒論・修論発表などの準備を管理します"
 title: "[発表準備] "
 labels:
@@ -26,7 +26,7 @@ body:
   - type: input
     id: event
     attributes:
-      label: "発表イベント"
+      label: "発表イベント / Event"
       description: "学会・研究会・卒論発表・修論発表・中間発表など、発表する場を記入してください"
       placeholder: "例: GISTAM 2027 / 修士論文発表会 2026"
     validations:
@@ -35,7 +35,7 @@ body:
   - type: dropdown
     id: presentation-type
     attributes:
-      label: "発表形式"
+      label: "発表形式 / Presentation type"
       options:
         - "Oral / 口頭発表"
         - "Poster / ポスター"
@@ -49,7 +49,7 @@ body:
   - type: input
     id: presentation-title
     attributes:
-      label: "発表タイトル"
+      label: "発表タイトル / Presentation title"
       description: "現時点のタイトルで構いません。確定後に更新してください"
     validations:
       required: true
@@ -57,7 +57,7 @@ body:
   - type: input
     id: related-paper-writing
     attributes:
-      label: "関連Paper Writing Issue"
+      label: "関連する論文執筆Issue / Related Paper Writing issue"
       description: "論文に基づく発表の場合は、元の論文執筆Issue番号またはURLを記入してください"
       placeholder: "例: #80"
     validations:
@@ -66,7 +66,7 @@ body:
   - type: input
     id: presenter
     attributes:
-      label: "発表者"
+      label: "発表者 / Presenter"
       description: "実際に発表する人を記入してください"
     validations:
       required: true
@@ -74,7 +74,7 @@ body:
   - type: dropdown
     id: language
     attributes:
-      label: "発表言語"
+      label: "発表言語 / Language"
       options:
         - "Japanese / 日本語"
         - "English / 英語"
@@ -85,7 +85,7 @@ body:
   - type: input
     id: duration
     attributes:
-      label: "発表時間・質疑時間"
+      label: "発表時間・質疑時間 / Presentation and Q&A duration"
       description: "分かっている場合は発表時間と質疑時間を記入してください"
       placeholder: "例: 発表15分 + 質疑5分"
     validations:
@@ -94,7 +94,7 @@ body:
   - type: input
     id: deadline
     attributes:
-      label: "Deadline"
+      label: "期限 / Deadline"
       description: "研究室内でレビュー可能な完成版にする期限を YYYY-MM-DD で入力してください。中央自動化がProjectのDeadlineへ同期します。"
       placeholder: "2027-03-24"
     validations:
@@ -103,7 +103,7 @@ body:
   - type: textarea
     id: key-message
     attributes:
-      label: "この発表で伝えること"
+      label: "この発表で伝えること / Key message"
       description: "聴衆に持ち帰ってほしい主張・メッセージを1〜3点に絞ってください"
       value: |
         1.
@@ -115,7 +115,7 @@ body:
   - type: textarea
     id: materials
     attributes:
-      label: "発表資料・準備物"
+      label: "発表資料・準備物 / Materials"
       description: "この発表で必要な成果物を列挙してください"
       value: |
         - [ ] スライド / ポスター初稿
@@ -130,16 +130,16 @@ body:
   - type: textarea
     id: rehearsal
     attributes:
-      label: "発表練習"
+      label: "発表練習 / Rehearsal"
       description: "練習日、所要時間、指摘事項、次に直すことを記録してください"
       value: |
-        ### 練習記録
+        ### 練習記録 / Rehearsal log
         - YYYY-MM-DD:
 
-        ### 時間
+        ### 時間 / Timing
         -
 
-        ### 指摘・修正事項
+        ### 指摘・修正事項 / Feedback and revisions
         -
     validations:
       required: false
@@ -147,7 +147,7 @@ body:
   - type: textarea
     id: questions
     attributes:
-      label: "想定質問・回答"
+      label: "想定質問・回答 / Expected questions and answers"
       description: "想定される質問と回答方針を整理してください"
       value: |
         - Q:
@@ -158,7 +158,7 @@ body:
   - type: textarea
     id: logistics
     attributes:
-      label: "機材・デモ・当日の確認事項"
+      label: "機材・デモ・当日の確認事項 / Equipment, demo and event checklist"
       description: "PC、アダプタ、ネットワーク、デモ機材、印刷物などがある場合に記入してください"
       value: |
         -
@@ -168,18 +168,18 @@ body:
   - type: textarea
     id: links
     attributes:
-      label: "成果物・リンク"
+      label: "成果物・リンク / Deliverables and links"
       value: |
-        ### Slides / Poster
+        ### スライド・ポスター / Slides and poster
         -
 
-        ### Demo / Repository
+        ### デモ・リポジトリ / Demo and repository
         -
 
-        ### Related Paper
+        ### 関連論文 / Related paper
         -
 
-        ### Other
+        ### その他 / Other
         -
     validations:
       required: false
