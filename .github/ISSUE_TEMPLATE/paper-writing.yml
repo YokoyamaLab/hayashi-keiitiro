@@ -1,4 +1,4 @@
-name: "論文執筆"
+name: "論文執筆 / Paper Writing"
 description: "投稿予定論文の内容、投稿先、デッドライン、執筆計画を管理します"
 title: "[論文執筆] "
 labels:
@@ -10,7 +10,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        # 論文執筆
+        # 論文執筆 / Paper Writing
 
         このIssueは、少し長期の論文執筆を管理するためのものです。
 
@@ -24,7 +24,7 @@ body:
   - type: input
     id: venue
     attributes:
-      label: "投稿先"
+      label: "投稿先 / Target venue"
       description: "国際会議、国内研究会、論文誌などの名称を書いてください"
       placeholder: "例: GISTAM 2027"
     validations:
@@ -33,7 +33,7 @@ body:
   - type: dropdown
     id: venue-type
     attributes:
-      label: "投稿種別"
+      label: "投稿種別 / Venue type"
       options:
         - "International conference / 国際会議"
         - "Domestic conference or workshop / 国内学会・研究会"
@@ -45,7 +45,7 @@ body:
   - type: input
     id: venue-url
     attributes:
-      label: "投稿先URL"
+      label: "投稿先URL / Venue URL"
       placeholder: "https://"
     validations:
       required: false
@@ -53,7 +53,7 @@ body:
   - type: input
     id: paper-title
     attributes:
-      label: "論文タイトル（仮）"
+      label: "論文タイトル（仮） / Working paper title"
       description: "現時点の仮題で構いません"
     validations:
       required: true
@@ -61,7 +61,7 @@ body:
   - type: textarea
     id: authors
     attributes:
-      label: "著者候補"
+      label: "著者候補 / Prospective authors"
       description: "現時点で想定している著者と順序を書いてください"
       placeholder: |
         1. First Author
@@ -74,14 +74,14 @@ body:
     attributes:
       value: |
         ---
-        ## Important Dates
+        ## 重要日程 / Important Dates
 
         締切は必ず公式サイトで確認し、変更があればこのIssueも更新してください。
 
   - type: input
     id: abstract-deadline
     attributes:
-      label: "Abstract / Title registration deadline"
+      label: "概要・タイトル登録締切 / Abstract and title registration deadline"
       placeholder: "YYYY-MM-DD または N/A"
     validations:
       required: false
@@ -89,7 +89,7 @@ body:
   - type: input
     id: submission-deadline
     attributes:
-      label: "Paper submission deadline"
+      label: "論文投稿締切 / Paper submission deadline"
       placeholder: "YYYY-MM-DD"
     validations:
       required: true
@@ -97,7 +97,7 @@ body:
   - type: input
     id: notification-date
     attributes:
-      label: "Notification"
+      label: "採否通知 / Notification"
       placeholder: "YYYY-MM-DD または N/A"
     validations:
       required: false
@@ -105,7 +105,7 @@ body:
   - type: input
     id: camera-ready-deadline
     attributes:
-      label: "Camera-ready deadline"
+      label: "最終原稿締切 / Camera-ready deadline"
       placeholder: "YYYY-MM-DD または N/A"
     validations:
       required: false
@@ -113,7 +113,7 @@ body:
   - type: input
     id: internal-deadline
     attributes:
-      label: "研究室内締切"
+      label: "研究室内締切 / Internal deadline"
       description: "投稿締切より前に、指導・レビューを受けられる状態にする日を設定してください"
       placeholder: "YYYY-MM-DD"
     validations:
@@ -122,7 +122,7 @@ body:
   - type: textarea
     id: paper-summary
     attributes:
-      label: "どのような論文か"
+      label: "どのような論文か / Paper summary"
       description: "一段落程度で、この論文で何を主張するのかを書いてください"
       placeholder: "この論文では..."
     validations:
@@ -131,7 +131,7 @@ body:
   - type: textarea
     id: problem
     attributes:
-      label: "解決する問題、仮説、もしくは Research Question"
+      label: "解決する問題・仮説・研究課題 / Problem, hypothesis or research question"
       description: "この研究で解決しようとしている問題を具体的に書いてください"
     validations:
       required: true
@@ -139,7 +139,7 @@ body:
   - type: textarea
     id: contribution
     attributes:
-      label: "主張する貢献"
+      label: "主張する貢献 / Contributions"
       description: "投稿時に論文のContributionとして主張したい点を書いてください"
       value: |
         1.
@@ -151,7 +151,7 @@ body:
   - type: textarea
     id: structure
     attributes:
-      label: "論文構成案"
+      label: "論文構成案 / Paper outline"
       description: "章構成と、それぞれで何を書くかを計画してください"
       value: |
         1. Introduction
@@ -172,7 +172,7 @@ body:
   - type: textarea
     id: experiments
     attributes:
-      label: "必要な実験・分析"
+      label: "必要な実験・分析 / Required experiments and analysis"
       description: "投稿までに終える必要がある実験、実装、データ分析を列挙してください"
       value: |
         - [ ]
@@ -184,7 +184,7 @@ body:
   - type: textarea
     id: writing-plan
     attributes:
-      label: "執筆・投稿までの計画"
+      label: "執筆・投稿までの計画 / Writing and submission plan"
       description: "週次報告とは別に、主要なマイルストーンと期限を置いてください"
       value: |
         - [ ] YYYY-MM-DD: 実験完了
@@ -198,7 +198,7 @@ body:
   - type: textarea
     id: risks
     attributes:
-      label: "投稿に向けたリスク・未確定事項"
+      label: "投稿に向けたリスク・未確定事項 / Submission risks and uncertainties"
       description: "実験、データ、実装、共著者、ページ数、投稿要件などの懸念を書いてください"
     validations:
       required: false
@@ -206,12 +206,12 @@ body:
   - type: textarea
     id: links
     attributes:
-      label: "リンク"
+      label: "リンク / Links"
       value: |
-        ### 論文TeXソースコード（各自のリポジトリ内に作成してください／2027年までは過渡期としてOverleafも可）
+        ### 論文TeXソースコード / Paper TeX source (use your repository; Overleaf also allowed through 2027)
         -
 
-        ### その他
+        ### その他 / Other
         -
     validations:
       required: false
