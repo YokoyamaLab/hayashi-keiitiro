@@ -1,4 +1,4 @@
-name: "研究タスク"
+name: "研究タスク / Research Task"
 description: "実装、実験、分析、データ準備、環境構築などの研究作業を管理します"
 title: "[研究タスク] "
 labels:
@@ -10,7 +10,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        # 研究タスク
+        # 研究タスク / Research Task
         
         このIssueは、実装・実験・分析・データ準備・環境構築など、完了条件を明確にできる研究作業を管理するためのものです。
 
@@ -26,7 +26,7 @@ body:
   - type: dropdown
     id: task-type
     attributes:
-      label: "作業種別"
+      label: "作業種別 / Task type"
       options:
         - "Implementation / 実装"
         - "Experiment / 実験"
@@ -41,7 +41,7 @@ body:
   - type: input
     id: deadline
     attributes:
-      label: "Deadline"
+      label: "期限 / Deadline"
       description: "このIssue全体を完了する期限を YYYY-MM-DD で入力してください。中央自動化がProjectのDeadlineへ同期します。"
       placeholder: "2026-09-18"
     validations:
@@ -50,7 +50,7 @@ body:
   - type: textarea
     id: objective
     attributes:
-      label: "目的"
+      label: "目的 / Objective"
       description: "なぜこの作業を行うのか、研究上の目的を書いてください"
       placeholder: "この作業によって..."
     validations:
@@ -59,7 +59,7 @@ body:
   - type: textarea
     id: task
     attributes:
-      label: "作業内容"
+      label: "作業内容 / Tasks"
       description: "実施する内容を具体的に書いてください"
       value: |
         -
@@ -81,7 +81,7 @@ body:
   - type: textarea
     id: related
     attributes:
-      label: "関連Issue・論文"
+      label: "関連Issue・論文 / Related issues and papers"
       description: "関連するPaper Writing、Paper Survey、他の研究タスク等があればリンクしてください"
       value: |
         -
@@ -91,22 +91,22 @@ body:
   - type: textarea
     id: evidence
     attributes:
-      label: "成果物・Evidence"
+      label: "成果物 / Evidence"
       description: "作業完了時にPR、commit、実験結果、グラフ、データ等へのリンクを追記してください"
       value: |
-        ### Pull Request
+        ### プルリクエスト / Pull Request
         -
 
-        ### Commits
+        ### コミット / Commits
         -
 
-        ### Experiment / Results
+        ### 実験・結果 / Experiments and results
         -
 
-        ### Data / Document
+        ### データ・文書 / Data and documents
         -
 
-        ### Other
+        ### その他 / Other
         -
     validations:
       required: false
@@ -114,7 +114,7 @@ body:
   - type: textarea
     id: risks
     attributes:
-      label: "懸念・ブロッカー・相談事項"
+      label: "懸念・ブロッカー・相談事項 / Risks, blockers and questions"
       description: "技術的な障害、判断が必要なこと、教員に相談したいことを書いてください"
     validations:
       required: false
