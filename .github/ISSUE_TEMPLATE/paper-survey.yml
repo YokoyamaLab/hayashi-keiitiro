@@ -1,4 +1,4 @@
-name: "論文調査（1論文1Issue）"
+name: "論文調査 / Paper Survey (1 paper per issue)"
 description: "読んだ論文を1本ずつ記録します。1 Issue = 1論文です"
 title: "[論文調査] "
 labels:
@@ -31,7 +31,7 @@ body:
   - type: input
     id: paper-title
     attributes:
-      label: "論文タイトル"
+      label: "論文タイトル / Paper title"
       description: "論文の正式タイトルを記入してください"
       placeholder: "Attention Is All You Need"
     validations:
@@ -40,7 +40,7 @@ body:
   - type: input
     id: deadline
     attributes:
-      label: "Deadline"
+      label: "期限 / Deadline"
       description: "この論文を読み終え、調査記録を完成させてIssueをCloseする期限を YYYY-MM-DD で入力してください。中央自動化がProjectのDeadlineへ同期します。"
       placeholder: "2026-09-11"
     validations:
@@ -49,7 +49,7 @@ body:
   - type: input
     id: authors
     attributes:
-      label: "著者"
+      label: "著者 / Authors"
       description: "主要著者を記入してください。長い場合は et al. でも構いません"
       placeholder: "Vaswani et al."
     validations:
@@ -58,7 +58,7 @@ body:
   - type: input
     id: venue
     attributes:
-      label: "会議名・論文誌名"
+      label: "会議名・論文誌名 / Venue"
       description: "会議、論文誌、arXiv等を記入してください"
       placeholder: "NeurIPS 2017"
     validations:
@@ -67,7 +67,7 @@ body:
   - type: input
     id: publication-year
     attributes:
-      label: "発表年"
+      label: "発表年 / Publication year"
       placeholder: "2017"
     validations:
       required: true
@@ -75,7 +75,7 @@ body:
   - type: input
     id: paper-url
     attributes:
-      label: "論文URL / DOI"
+      label: "論文URL / Paper URL / DOI"
       description: "DOI、出版社ページ、arXiv等のURLを記入してください"
       placeholder: "https://..."
     validations:
@@ -84,7 +84,7 @@ body:
   - type: input
     id: one-line-summary
     attributes:
-      label: "一言まとめ"
+      label: "一言まとめ / One-line summary"
       description: "この論文が何をした論文なのか、一覧を見ただけで分かる1文を書いてください"
       placeholder: "自己注意機構だけで系列変換を行うTransformerを提案した論文。"
     validations:
@@ -93,7 +93,7 @@ body:
   - type: textarea
     id: problem
     attributes:
-      label: "何を解決しようとしているか"
+      label: "何を解決しようとしているか / Problem"
       description: "この論文が扱う問題・課題を簡潔に書いてください"
     validations:
       required: true
@@ -101,7 +101,7 @@ body:
   - type: textarea
     id: method
     attributes:
-      label: "どのような方法か"
+      label: "どのような方法か / Method"
       description: "提案手法、モデル、アルゴリズム、実験設計などを自分の言葉でまとめてください"
     validations:
       required: true
@@ -109,7 +109,7 @@ body:
   - type: textarea
     id: data
     attributes:
-      label: "どのようなデータを使っているか"
+      label: "どのようなデータを使っているか / Data"
       description: "データセット、センサ、SNS、画像、時系列など、対象データを書いてください"
     validations:
       required: false
@@ -117,7 +117,7 @@ body:
   - type: textarea
     id: result
     attributes:
-      label: "主な結果・分かったこと"
+      label: "主な結果・分かったこと / Main results and findings"
       description: "何と比較して、何が良くなった／分かったのかを書いてください"
     validations:
       required: true
@@ -125,15 +125,15 @@ body:
   - type: textarea
     id: strengths-limitations
     attributes:
-      label: "良い点・限界・疑問点"
+      label: "良い点・限界・疑問点 / Strengths, limitations and questions"
       value: |
-        ### 良い点
+        ### 良い点 / Strengths
         -
 
-        ### 限界
+        ### 限界 / Limitations
         -
 
-        ### 疑問点
+        ### 疑問点 / Questions
         -
     validations:
       required: false
@@ -141,16 +141,16 @@ body:
   - type: textarea
     id: relation
     attributes:
-      label: "自分の研究との関係"
+      label: "自分の研究との関係 / Relevance to my research"
       description: "なぜこの論文を読んだか、自分の研究でどこを利用・比較・引用できそうかを書いてください"
       value: |
-        ### なぜ読んだか
+        ### なぜ読んだか / Why I read this paper
         -
 
-        ### 自分の研究に使えそうな点
+        ### 自分の研究に使えそうな点 / Potential uses in my research
         -
 
-        ### 比較対象・引用候補として
+        ### 比較対象・引用候補として / Potential comparisons and citations
         -
     validations:
       required: true
@@ -158,7 +158,7 @@ body:
   - type: textarea
     id: notes
     attributes:
-      label: "メモ"
+      label: "メモ / Notes"
       description: "図番号、重要な式、再読したい箇所、関連Issueなど自由に記録してください"
     validations:
       required: false
@@ -166,7 +166,7 @@ body:
   - type: textarea
     id: next
     attributes:
-      label: "次に読む"
+      label: "次に読む / Next reading"
       description: "次に読むべき論文があれば理由とともに書いてください"
     validations:
       required: false
